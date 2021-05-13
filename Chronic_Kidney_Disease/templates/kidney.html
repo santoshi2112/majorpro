@@ -1,0 +1,232 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="row" style="margin-bottom: 125px;">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <center>
+            <h1>Kidney Disease Predictor</h1>
+        </center>
+        <div class="card card-body" style="border: 1px solid black;">
+            <form class="form-horizontal" id="needs-validation" action="{{ url_for('predictPage') }}" method="POST"
+                novalidate>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="age"
+                                placeholder="age" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="bp"
+                                placeholder="bp" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="al"
+                                placeholder="al" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="su"
+                                placeholder="su" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="rbc"
+                                placeholder="rbc" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="pc"
+                                placeholder="pc" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="pcc"
+                                placeholder="pcc" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="ba"
+                                placeholder="ba" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="bgr"
+                                placeholder="bgr" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="bu"
+                                placeholder="bu" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="sc"
+                                placeholder="sc" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="pot"
+                                placeholder="pot" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="wc"
+                                placeholder="wc" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="htn"
+                                placeholder="htn" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="dm"
+                                placeholder="dm" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="cad"
+                                placeholder="cad" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="pe"
+                                placeholder="pe" required>
+
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="ane"
+                                placeholder="ane" required>
+                            <div class="invalid-feedback">
+                                Please enter required data
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="submit" class="btn btn-info btn-block" value="Predict">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="reset" class="btn btn-info btn-block" onClick="window.location.reload();"
+                            value="Reset" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<script>
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            var form = document.getElementById('needs-validation');
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        }, false);
+    })();
+
+</script>
+
+{% endblock %}

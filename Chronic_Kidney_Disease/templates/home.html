@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endif %}
+<div class="container">
+    <div class="card card-body" style="border: 1px solid black; box-shadow: 0 0 10px black;">
+        <h2>This is Machine Learning based WebApp.</h2>
+        <br>
+        <h3>Information about the Diseases which this webApp can predict.</h3>
+        <br>
+        <div class="row">
+            <div class="col-md-12 card card-body" style="box-shadow: 0 0 5px black; margin: 5px;">
+                <h4>Kidney Disease</h4>
+                <p>Chronic kidney disease, also called chronic kidney failure, describes the gradual loss of kidney function. Your kidneys filter wastes and excess fluids from your blood, which are then excreted in your urine. When chronic kidney disease reaches an advanced stage, dangerous levels of fluid, electrolytes and wastes can build up in your body.
+
+				In the early stages of chronic kidney disease, you may have few signs or symptoms. Chronic kidney disease may not become apparent until your kidney function is significantly impaired.
+
+				Treatment for chronic kidney disease focuses on slowing the progression of the kidney damage, usually by controlling the underlying cause. Chronic kidney disease can progress to end-stage kidney failure, which is fatal without artificial filtering (dialysis) or a kidney transplant.</p>
+                <h5>Symptoms</h5>
+                <ul>
+					<li>Nausea</li>
+					<li>Vomiting</li>
+					<li>Loss of appetite</li>
+					<li>Fatigue and weakness</li>
+					<li>Sleep problems</li>
+					<li>Changes in how much you urinate</li>
+					<li>Decreased mental sharpness</li>
+					<li>Muscle twitches and cramps</li>
+					<li>Swelling of feet and ankles</li>
+					<li>Persistent itching</li>
+					<li>Chest pain, if fluid builds up around the lining of the heart</li>
+					<li>Shortness of breath, if fluid builds up in the lungs</li>
+					<li>High blood pressure (hypertension) that's difficult to control</li>
+                </ul>
+            </div>
+        </div>
+        <h2>Model Accuracies:</h2>
+        <ul>
+            <li>Kidney Disease Model: <strong>99%</strong></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
